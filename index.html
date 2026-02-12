@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Phosphor Pit Snake - a retro CRT-inspired arcade snake game with keyboard and touch controls."
+    />
+    <title>Phosphor Pit Snake</title>
+  </head>
+  <body>
+    <div class="arcade">
+      <header class="marquee">
+        <p class="brand-chip">RZ-84 coin-op simulation</p>
+        <h1>Phosphor Pit Snake</h1>
+        <p class="subtitle">Thread the glowing alleyways. Every fruit speeds up the run.</p>
+      </header>
+
+      <main class="console">
+        <section class="hud" aria-label="score panel">
+          <article class="hud-card">
+            <span class="hud-label">Score</span>
+            <strong class="hud-value" id="score">0</strong>
+          </article>
+          <article class="hud-card">
+            <span class="hud-label">High</span>
+            <strong class="hud-value" id="high-score">0</strong>
+          </article>
+          <article class="hud-card">
+            <span class="hud-label">Level</span>
+            <strong class="hud-value" id="level">1</strong>
+          </article>
+          <article class="hud-card">
+            <span class="hud-label">Mode</span>
+            <strong class="hud-value">Survival</strong>
+          </article>
+        </section>
+
+        <section class="screen-shell">
+          <div class="screen-wrap">
+            <canvas id="game" aria-label="Snake game board"></canvas>
+            <div class="overlay" id="overlay"></div>
+          </div>
+        </section>
+
+        <section class="controls" aria-label="controls">
+          <div class="actions">
+            <button id="start-btn" class="btn" type="button">START / RESTART</button>
+            <button id="sound-btn" class="btn" type="button" aria-pressed="true">SOUND: ON</button>
+          </div>
+
+          <div class="dpad" aria-label="touch directional controls">
+            <button type="button" class="up" data-dir="up" aria-label="Move up">▲</button>
+            <button type="button" class="left" data-dir="left" aria-label="Move left">◀</button>
+            <button type="button" class="right" data-dir="right" aria-label="Move right">▶</button>
+            <button type="button" class="down" data-dir="down" aria-label="Move down">▼</button>
+          </div>
+
+          <p class="hint">Keyboard: Arrow keys or WASD · Space/Enter to restart</p>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
